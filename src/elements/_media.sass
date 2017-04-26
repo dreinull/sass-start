@@ -1,0 +1,17 @@
+@if $img-resp-def
+  img
+    max-width: 100%
+    &.not-resp
+      max-width: inherit
+@else
+  img.resp
+    max-width: 100%
+
+img
+  &.circle
+    +border-radius(50%)
+  &.rounded
+    +border-radius
+  &.bordered
+    padding: 3px
+    border: 1px solid $grey-light

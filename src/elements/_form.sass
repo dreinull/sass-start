@@ -1,0 +1,43 @@
+form
+  margin-bottom: $default-margin
+
+  &.thin
+    max-width: $thin-form-width
+    margin-left: auto
+    margin-right: auto
+
+  .group
+    margin-bottom: $default-margin
+
+  label
+    display: block
+    font-weight: $bold
+    margin-bottom: 3px
+    padding-left: 2px
+
+  input
+    margin-bottom: $default-margin
+    &[type="text"],
+    &[type="password"],
+    &[type="date"],
+    &[type="datetime-local"],
+    &[type="email"],
+    &[type="month"],
+    &[type="number"],
+    &[type="range"],
+    &[type="search"],
+    &[type="tel"],
+    &[type="time"],
+    &[type="url"],
+    &[type="week"],
+      display: block
+      box-sizing: border-box
+      width: 100%
+      padding: 8px
+      font-size: 1rem
+      border: 1px solid $grey-light
+
+  textarea
+    @extend input[type="text"]
+    margin-bottom: $default-margin
+    min-height: 150px

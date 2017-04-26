@@ -1,0 +1,32 @@
+input[type="submit"],
+input[type="button"],
+button,
+.button
+  min-width: $thin-form-width / 2 - 7px
+  margin-bottom: $default-margin * 2
+  margin-right: $default-margin
+  padding: $default-margin
+  background: $default-color
+  display: inline-block
+  font-size: 1rem
+  border: none
+  color: white
+  +shadow
+  &:hover
+    background: lighten( $default-color, 8% )
+
+  &.success
+    background: $success-color
+    &:hover
+      background: lighten($success-color, 8%)
+  &.alert
+    background: $alert-color
+    &:hover
+      background: lighten($alert-color, 8%)
+
+  &.full-width
+    width: 100%
+    margin-right: 0
+
+  form &:last-child
+    margin-right: 0

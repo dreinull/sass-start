@@ -1,0 +1,33 @@
+table
+  width: 100%
+  margin-bottom: $default-margin
+
+  tr
+    border-bottom: 1px solid $grey-light
+
+  thead tr
+    border-bottom-width: 2px
+
+  th, td
+    padding: 8px
+
+  thead th, thead tr, tfoot tr
+    height: 2em
+    text-align: left
+    vertical-align: middle
+    font-weight: $bold
+
+  td
+    vertical-align: top
+
+  &.striped
+    tbody tr:nth-child(odd)
+      background: $grey-lighter
+
+  &.bordered
+    td, th
+      border: 1px solid $grey-light
+
+  &.hover
+    tr:hover
+      background: $grey-lighter

@@ -1,0 +1,233 @@
+.nav
+  @if $nav-container
+    @extend .con
+  margin-bottom:  $default-margin
+  border-bottom: 1px solid $grey-light
+  +clearfix
+
+  .logo
+    text-decoration: none
+    font-weight: $bold
+    font-size: 30px
+    float: left
+    padding: $default-margin
+    margin-right: 30px
+    @if $nav-container
+      padding-left: 0
+
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    float: left
+    +clearfix
+
+    &.right
+      float: right
+      text-align: left
+
+    li
+      float: left
+      display: block
+      position: relative
+      margin: 0
+
+      a
+        display: block
+        padding: 23px 18px
+        text-decoration: none
+
+        &:hover
+          background: $grey-lighter
+          +transition
+
+      &:hover > ul
+        display: block
+        background: white
+        border: 1px solid $grey-light
+
+      ul
+        position: absolute
+        display: none
+        top: 100%
+        left: 0
+        min-width: 150px
+
+        li
+          float: none
+
+          a
+            padding-top: 12px
+            padding-bottom: 12px
+
+  #nav-responsive-dropdown
+    display: none
+
+  #nav-responsive-dropdown-label
+    display: none
+
+    &:after
+      content: ''
+      display: block
+      width: 30px
+      height: 5px
+      background: #777
+      box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+
+@media (max-width: $break-nav)
+  .nav
+    margin-right: 0
+    padding-left: 0
+
+    .logo
+      float: none
+      margin-left: $default-margin
+
+    ul
+      float: none
+      display: none
+
+      &.right
+        float: none
+
+      li
+        float: none
+
+        a
+          padding: 18px $default-margin
+
+        &:hover > ul
+          border: none
+
+        ul
+          position: static
+          display: block
+          top: auto
+          min-width: inherit
+
+          li
+            margin-left: 30px
+
+
+    #nav-responsive-dropdown-label
+      display: block
+      position: absolute
+      top: 10px
+      right: 10px
+      height: 30px
+      cursor: pointer
+      +transition
+
+    #nav-responsive-dropdown:checked ~ #nav-responsive-dropdown-label
+      +rotate(90deg)
+
+    #nav-responsive-dropdown:checked ~ ul
+      display: block
+
+
+  //
+  // ul
+  //   list-style: none
+  //   margin: 0
+  //
+  // a
+  //   color: $font-color
+  //
+  // > ul, > .con > ul
+  //   float: right
+  //   +clearfix
+  //
+  //   > li
+  //     text-align: center
+  //     margin: 0
+  //     border: 3px solid red
+  //     display: inline-block
+  //
+  //     > a
+  //       cursor: pointer
+  //       outline: none
+  //       text-decoration: none
+  //       padding: 10px 20px
+  //
+  //     ul
+  //       display: none
+  //       position: absolute
+  //       left: 0
+  //       top: 100%
+  //       width: 100%
+  //       z-index: 2000
+//
+//         li
+//           width: 100%
+//           text-align: left
+//
+//           a
+//             text-decoration: none
+//
+//           &:hover
+//             cursor: pointer
+//             position: relative
+//
+//             > ul
+//               display: block
+//
+//             > a
+//               color: $grey
+//
+// @media (max-width: $break-nav)
+//   .nav
+//     > ul
+//       display: none
+//       background: white
+//       border-bottom: 3px solid $grey-light
+//
+//     #nav-responsive-dropdown-label
+//       display: block
+//       width: 40px
+//       height: 40px
+//       cursor: pointer
+//       position: absolute
+//       right: 20px
+//       top: 15px
+//
+//       &:after
+//         content: ''
+//         display: block
+//         width: 30px
+//         height: 5px
+//         background: #777
+//         margin: 7px 5px
+//         box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+//
+//     #nav-responsive-dropdown:checked ~ ul
+//       display: block
+//       z-index: 4000
+//       position: absolute
+//       right: 0
+//       left: 0
+//       margin-left: 0
+//
+//     ul
+//       margin-bottom: 0
+//
+//       li
+//         display: block
+//         float: none
+//         width: 100%
+//         text-align: left
+//         text-indent: 20px
+//
+//       li
+//         margin-left: 20px
+//
+//     > ul li ul, > .con > ul li ul
+//       display: block
+//       position: relative
+//       width: 100%
+//       z-index: 4000
+//       float: none
+//
+//       li
+//         display: block
+//         float: none

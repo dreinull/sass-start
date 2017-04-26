@@ -1,0 +1,55 @@
+.con
+  width: 100%
+  max-width: $container-width - 2 * $container-padding
+  margin: 0 auto
+  padding: 0 $container-padding
+  margin-bottom: $default-margin
+  box-sizing: border-box
+
++max-lg
+  .con
+    max-width: $break-lg - 2 * $container-padding
+
++max-md
+  .con
+    max-width: $break-md - 2 * $container-padding
+
++max-sm
+  .con
+    max-width: $break-sm - 2 * $container-padding
+    +clearfix
+
+.row
+  margin: 0 (-$container-padding)
+  +clearfix
+
+@for $i from 1 to $grid-columns
+  .xs#{$i}, .sm#{$i}, .md#{$i}, .lg#{$i}
+    float: left
+    min-height: 1px
+    padding: 0 $container-padding
+    box-sizing: border-box
+    +clearfix
+
+@for $i from 1 to $grid-columns
+  .xs#{$i}
+    width: 100% / $grid-columns * $i
+
+@for $i from 1 to $grid-columns
+  .sm#{$i}, .md#{$i}, .lg#{$i}
+    width: 100%
+
++min-sm
+  @for $i from 1 to $grid-columns
+    .sm#{$i}
+      width: 100% / $grid-columns * $i
+
++min-md
+  @for $i from 1 to $grid-columns
+    .md#{$i}
+      width: 100% / $grid-columns * $i
+
++min-lg
+  @for $i from 1 to $grid-columns
+    .lg#{$i}
+      width: 100% / $grid-columns * $i

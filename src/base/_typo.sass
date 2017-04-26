@@ -1,0 +1,170 @@
+html
+  font-family: 'Open Sans', sans-serif
+  font-size: 14px
+  color: $font-color
+  background: $background-color
+
+body
+  line-height: 1.6
+
+p
+  margin-bottom: $default-margin
+
+a
+  color: $link-color
+  text-decoration: none
+
+  &:hover, &:active, &:focus
+    text-decoration: underline
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  margin: .5em 0 .25em
+  font-weight: 600
+  color: #333
+  & small
+    font-size: .7em
+    color: $grey
+
+h1, .h1
+  font-size: 2.5rem * $heading-scale
+
+h2, .h2
+  font-size: 2rem * $heading-scale
+
+h3, .h3
+  font-size: 1.75rem * $heading-scale
+
+h4, .h4
+  font-size: 1.5rem * $heading-scale
+
+h5, .h5
+  font-size: 1.25rem * $heading-scale
+
+h6, .h6
+  font-size: 1rem * $heading-scale
+
+.page-header
+  @extend h1
+  border-bottom: 1px solid $font-color
+
+b, strong
+  font-weight: $bold
+
+i, dfn
+  font-style: italic
+
+small
+  font-size: .8rem
+
+sub, sup
+  position: relative
+  font-size: .8rem
+  line-height: 0
+  vertical-align: baseline
+
+sub
+  bottom: -.25em
+
+sup
+  top: -.5em
+
+p.lead
+  font-size: 1.4em
+  font-weight: 300
+  line-height: 1.4
+
+
+.left
+  text-align: left
+.right
+  text-align: right
+.center
+  text-align: center
+.justify
+  text-align: justify
+
+.lowercase
+  text-transform: lowercase
+.uppercase
+  text-transform: uppercase
+.capitalize
+  text-transform: capitalize
+
+blockquote
+  margin-left: $default-margin
+  padding-left: $default-margin
+  border-left: 4px solid $grey-light
+  font-size: 1.25em
+  padding: $default-margin
+  margin: 0 0 $default-margin $default-margin
+  p
+    margin: 0
+
+ul, ol
+  margin-bottom: $default-margin
+  margin-left: $default-margin * 2
+
+  &.unstyled
+    margin-left: 0
+    list-style: none
+    li
+      margin-left: 0
+
+  &.inline
+    list-style: none
+    margin-left: 0
+    padding-left: 0
+    li
+      display: inline-block
+      margin-left: $default-margin * 1.5
+      &:first-child
+        margin-left: 0
+
+li
+  margin-left: $default-margin
+  list-style-position: outside
+
+ul ul, ol ol, ul ol, ol ul
+  margin-left: $default-margin * 3
+
+ul ul
+  list-style: circle
+
+ul
+  list-style-type: disc
+
+ol
+  list-style-type: decimal
+  ol
+    list-style-type: lower-alpha
+    ol
+      list-style-type: lower-roman
+      ol
+        list-style-type: decimal
+
+dl
+  margin-bottom: $default-margin
+  dt
+    font-weight: $bold
+
+hr
+  border: 0
+  height: 1px
+  background: $grey-light
+  margin: $default-margin 0
+
+.marked
+  background: $default-color-pale
+
+.success
+  background: $success-color-pale
+
+.alert
+  background: $alert-color-pale
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  &.marked,
+  &.success,
+  &.alert
+    padding-left: $default-margin
+    padding-right: $default-margin
